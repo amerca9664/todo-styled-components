@@ -3,8 +3,8 @@ import { COLORS } from '../../styles/constStyles';
 import { StyledLabel } from './SetTheme.styles';
 
 const SetTheme = () => {
-	const { theme, setColor } = useState(false);
-
+	const [theme, setColor] = useState(false);
+	console.log(theme);
 	return (
 		<>
 			<input
