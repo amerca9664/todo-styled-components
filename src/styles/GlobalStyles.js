@@ -1,10 +1,10 @@
-import { createGlobalStyle } from "styled-components";
-import './normalize.css'
+import { createGlobalStyle } from 'styled-components';
+import './normalize.css';
 export const GlobalStyles = createGlobalStyle`
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
+body{background-color:gray}
 img{
     max-width: 100%;
     display: block;
@@ -20,5 +20,4 @@ ul{
 a{
     text-decoration: none;
     color: inherit;
-}`
-
+}`;

@@ -1,10 +1,11 @@
+import ContentTitle from './components/ContentTitle/ContentTitle.JSX';
 import { GlobalStyles } from './styles/GlobalStyles';
 
 const App = () => {
 	return (
 		<div>
 			<GlobalStyles />
-			<h1>Curso de React</h1>
+			<ContentTitle></ContentTitle>
 		</div>
 	);
 };
