@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="CalculadoraService"
+  targetNamespace="http://ejemplo.com/calculadora"
+  xmlns="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:tns="http://ejemplo.com/calculadora"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <message name="SumarRequest">
+    <part name="a" type="xsd:int"/>
+    <part name="b" type="xsd:int"/>
+  </message>
+
+  <message name="SumarResponse">
+    <part name="resultado" type="xsd:int"/>
+  </message>
+
+  <portType name="CalculadoraPort">
+    <operation name="Sumar">
+      <input message="tns:SumarRequest"/>
+      <output message="tns:SumarResponse"/>
+    </operation>
+  </portType>
+
+  <binding name="CalculadoraBinding" type="tns:CalculadoraPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="Sumar">
+      <soap:operation soapAction="http://ejemplo.com/calculadora/Sumar"/>
+      <input><soap:body use="encoded" namespace="urn:calculadora" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+      <output><soap:body use="encoded" namespace="urn:calculadora" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+    </operation>
+  </binding>
+
+  <service name="CalculadoraService">
+    <port name="CalculadoraPort" binding="tns:CalculadoraBinding">
+      <soap:address location="http://localhost:8000/wsdl"/>
+    </port>
+  </service>
+</definitions>
