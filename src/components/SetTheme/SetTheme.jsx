@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { COLORS } from '../../styles/constStyles';
-import { StyledLabel } from './SetTheme.styles';
 import { checkWindowTheme } from '../stylesFunctions';
+import { StyledLabel } from './SetTheme.styles';
 
 const SetTheme = () => {
 	const [theme, setColor] = useState(chkState);

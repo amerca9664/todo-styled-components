@@ -6,8 +6,11 @@ const StyledDiv = styled.div`
 	margin-left: auto;
 	margin-right: auto;
 
-    background-color: black;
+    background-color: lightgray;
 	border-radius: 10px;
 `;
 
-export { StyledDiv };
+const StyledDivJob = styled.div`
+`;
+
+export { StyledDiv, StyledDivJob };

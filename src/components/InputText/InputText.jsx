@@ -9,6 +9,7 @@ const InputText = ({ setListPrint }) => {
 				maxLength="37"
 				placeholder="Create a new todo..."
 				autoComplete="off"
+				name="tex"
 				onKeyUp={event => addItem(event, setListPrint)}
 			></StyledText>
 		</StyledDiv>

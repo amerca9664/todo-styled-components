@@ -11,7 +11,7 @@ const Content = () => {
 		<StyledDiv>
 			<ContentTitle></ContentTitle>
 			<InputText setListPrint={setListPrint}></InputText>
-			<Jobs listPrint={listPrint}></Jobs>
+			<Jobs listPrint={listPrint} setListPrint={setListPrint}></Jobs>
 		</StyledDiv>
 	);
 };
