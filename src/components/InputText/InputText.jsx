@@ -1,7 +1,7 @@
 import { addItem } from '../functions';
 import { StyledDiv, StyledText } from './input.styles';
 
-const InputText = ({ setListPrint }) => {
+const InputText = ({ themeStyle, setListPrint }) => {
 	return (
 		<StyledDiv>
 			<StyledText
@@ -10,6 +10,7 @@ const InputText = ({ setListPrint }) => {
 				placeholder="Create a new todo..."
 				autoComplete="off"
 				name="tex"
+				$background={themeStyle.itemBackground}
 				onKeyUp={event => addItem(event, setListPrint)}
 			></StyledText>
 		</StyledDiv>

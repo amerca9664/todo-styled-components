@@ -1,14 +1,12 @@
-import { useState } from 'react';
 import { COLORS } from '../../styles/constStyles';
-import { checkWindowTheme } from '../stylesFunctions';
+
 import { StyledLabel } from './SetTheme.styles';
 
-const SetTheme = () => {
-	const [theme, setColor] = useState(chkState);
+const SetTheme = ({ theme, setColor }) => {
 	const selectTheme = theme
 		? COLORS.darkTheme.imageTheme
 		: COLORS.lightTheme.imageTheme;
-	console.log(theme);
+
 	return (
 		<>
 			<input
@@ -22,7 +20,5 @@ const SetTheme = () => {
 		</>
 	);
 };
-
-const chkState = checkWindowTheme();
 
 export default SetTheme;

@@ -1,11 +1,11 @@
 import SetTheme from '../SetTheme/SetTheme';
 import { StyledH1, StyledHeader } from './contentTile.styles';
 
-const ContentTitle = () => {
+const ContentTitle = ({ theme, setColor }) => {
 	return (
 		<StyledHeader>
 			<StyledH1>TODO</StyledH1>
-			<SetTheme></SetTheme>
+			<SetTheme theme={theme} setColor={setColor}></SetTheme>
 		</StyledHeader>
 	);
 };

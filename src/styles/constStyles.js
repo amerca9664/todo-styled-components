@@ -1,21 +1,16 @@
 export const COLORS = {
 	darkTheme: {
-		backgroundBody: {
-			name: '--backgroundBody',
-			value: 'hsl(235, 21%, 11%)',
-		},
+		backgroundBody: 'hsl(235, 21%, 11%)',
+
 		imageTheme: 'url(/assets/image/icon-sun.svg)',
-		itemBackground: {
-			name: '--itemBackground',
-			value: 'hsl(235, 24%, 19%)',
-		},
+		itemBackground: 'hsl(235, 24%, 19%)',
+
 		borderItem: {
 			name: '--borderItem',
 			value: 'hsl(237, 14%, 26%)',
 		},
-		imageBackground: {
-			name: 'body-dark',
-		},
+		imageBackground: 'url(/assets/image/bg-mobile-dark.jpg)',
+
 		taskColor: {
 			name: '--taskColor',
 			value: 'hsl(234, 39%, 85%)',
@@ -27,23 +22,18 @@ export const COLORS = {
 	},
 
 	lightTheme: {
-		backgroundBody: {
-			name: '--backgroundBody',
-			value: 'hsl(236, 33%, 92%)',
-		},
+		backgroundBody: 'hsl(236, 33%, 92%)',
+
 		imageTheme: 'url(/assets/image/icon-moon.svg)',
 
-		itemBackground: {
-			name: '--itemBackground',
-			value: 'hsl(0, 0%, 98%)',
-		},
+		itemBackground: 'hsl(0, 0%, 98%)',
+
 		borderItem: {
 			name: '--borderItem',
 			value: 'hsl(236, 33%, 92%)',
 		},
-		imageBackground: {
-			name: 'body-light',
-		},
+		imageBackground: 'url(/assets/image/bg-mobile-light.jpg)',
+
 		taskColor: {
 			name: '--taskColor',
 			value: 'hsl(235, 19%, 35%)',

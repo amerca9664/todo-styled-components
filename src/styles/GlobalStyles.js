@@ -5,7 +5,8 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 body{
-    background-color:gray;
+    background: top / 100vw 30vh no-repeat ${({ $image }) => $image} ${({ $background }) => $background};
+    padding-top: 40px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;

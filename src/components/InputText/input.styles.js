@@ -31,7 +31,7 @@ const StyledText = styled.input`
 	width: 100%;
 	height: 100%;
 	padding-left: 50px;
-	background-color: gray;
+	background-color: ${({ $background }) => $background};
 	border: none;
 	outline: none;
 	caret-color: blue;
