@@ -4,7 +4,13 @@ export const GlobalStyles = createGlobalStyle`
 *, *::before, *::after {
   box-sizing: border-box;
 }
-body{background-color:gray}
+body{
+    background-color:gray;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 img{
     max-width: 100%;
     display: block;

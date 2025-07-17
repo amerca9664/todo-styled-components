@@ -1,12 +1,13 @@
-import ContentTitle from './components/ContentTitle/ContentTitle.JSX';
+import Content from './components/Content/Content';
+
 import { GlobalStyles } from './styles/GlobalStyles';
 
 const App = () => {
 	return (
-		<div>
+		<>
 			<GlobalStyles />
-			<ContentTitle></ContentTitle>
-		</div>
+			<Content></Content>
+		</>
 	);
 };
 
