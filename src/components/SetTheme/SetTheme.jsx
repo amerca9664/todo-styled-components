@@ -1,6 +1,6 @@
 import { COLORS } from '../../styles/constStyles';
 
-import { StyledLabel } from './SetTheme.styles';
+import { StyledLabel } from './setTheme.styles';
 
 const SetTheme = ({ theme, setColor }) => {
 	const selectTheme = theme
