@@ -1,4 +1,4 @@
-import ActionButtons from '../ActionButtons/ActionButtons.JSX';
+import ActionButtons from '../ActionButtons/ActionButtons';
 import { removeCompleted } from '../functions';
 import { StyledDiv, StyledInput } from './infoCleanContent.styles';
 
