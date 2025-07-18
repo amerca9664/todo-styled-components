@@ -10,6 +10,7 @@ body{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 0.8125rem;
     color: white;
 }
 

@@ -14,7 +14,11 @@ const Content = ({ theme, themeStyle, setColor }) => {
 				setListPrint={setListPrint}
 				themeStyle={themeStyle}
 			></InputText>
-			<Jobs listPrint={listPrint} setListPrint={setListPrint}></Jobs>
+			<Jobs
+				themeStyle={themeStyle}
+				listPrint={listPrint}
+				setListPrint={setListPrint}
+			></Jobs>
 		</StyledDiv>
 	);
 };

@@ -5,8 +5,8 @@ const StyledDiv = styled.div`
 	max-width: 700px;
 	margin-left: auto;
 	margin-right: auto;
-
-    background-color: lightgray;
+	color: ${({ $fontColor }) => $fontColor};
+    background-color: ${({ $background }) => $background};
 	border-radius: 10px;
 `;
 

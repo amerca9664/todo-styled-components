@@ -2,11 +2,14 @@ import ActionButtons from '../ActionButtons/ActionButtons.JSX';
 import { removeCompleted } from '../functions';
 import { StyledDiv, StyledInput } from './infoCleanContent.styles';
 
-const InfoCleanContent = ({ setListPrint }) => {
+const InfoCleanContent = ({ setListPrint, themeStyle }) => {
 	return (
-		<StyledDiv>
+		<StyledDiv $background={themeStyle.itemBackground}>
 			<span>x items left</span>
-			<ActionButtons setListPrint={setListPrint}></ActionButtons>
+			<ActionButtons
+				themeStyle={themeStyle}
+				setListPrint={setListPrint}
+			></ActionButtons>
 			<StyledInput
 				type="button"
 				value="Clean Completed"

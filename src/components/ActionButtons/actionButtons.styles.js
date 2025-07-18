@@ -12,7 +12,8 @@ const StyledDiv = styled.div`
 	padding-right: 20%;
 	left: 0;
 	top: 70px;
-	background-color: black;
+	font-size: 1rem;
+	background-color: ${({ $background }) => $background};
 `;
 
 const StyledRadButton = styled.input`

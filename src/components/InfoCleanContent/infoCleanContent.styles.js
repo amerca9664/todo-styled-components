@@ -7,10 +7,12 @@ const StyledDiv = styled.div`
 	align-items: center;
 	padding-left: 20px;
 	padding-right: 20px;
-
+	background-color: ${({ $background }) => $background};
     position: relative;
 	width: 100%;
     color: white;
+	border-radius: 10px;
+
 `;
 
 const StyledInput = styled.input`

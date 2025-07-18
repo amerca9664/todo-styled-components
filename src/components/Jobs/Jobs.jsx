@@ -4,26 +4,39 @@ import InfoCleanContent from '../InfoCleanContent/InfoCleanContent';
 import { Job } from '../Job/Job.jsx';
 import { StyledDiv, StyledDivJob } from './jobs.styles.js';
 
-const Jobs = ({ listPrint, setListPrint }) => {
+const Jobs = ({ themeStyle, listPrint, setListPrint }) => {
 	if (listPrint.length !== 0) {
 		return (
-			<StyledDiv>
+			<StyledDiv
+				$background={themeStyle.itemBackground}
+				$fontColor={themeStyle.taskColor}
+			>
 				<StyledDivJob onClick={event => setCheckbox(event, setListPrint)}>
 					{listPrint.map(item => (
-						<Job key={v4()} idPers={item.id} checkedState={item.state}>
+						<Job
+							themeStyle={themeStyle}
+							key={v4()}
+							idPers={item.id}
+							checkedState={item.state}
+						>
 							{item.name}
 						</Job>
 					))}
 				</StyledDivJob>
-				<InfoCleanContent setListPrint={setListPrint}></InfoCleanContent>
-			</StyledDiv>
-		);
-	} else {
-		return (
-			<StyledDiv>
-				<InfoCleanContent setListPrint={setListPrint}></InfoCleanContent>
+				<InfoCleanContent
+					setListPrint={setListPrint}
+					themeStyle={themeStyle}
+				></InfoCleanContent>
 			</StyledDiv>
 		);
 	}
+	return (
+		<StyledDiv>
+			<InfoCleanContent
+				setListPrint={setListPrint}
+				themeStyle={themeStyle}
+			></InfoCleanContent>
+		</StyledDiv>
+	);
 };
 export default Jobs;

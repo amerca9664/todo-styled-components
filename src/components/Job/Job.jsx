@@ -6,9 +6,9 @@ import {
 	StylesLabel,
 } from './job.styles';
 
-const Job = ({ idPers, checkedState, children }) => {
+const Job = ({ themeStyle, idPers, checkedState, children }) => {
 	return (
-		<StyledDiv>
+		<StyledDiv $borderColor={themeStyle.borderItem}>
 			<StyledDivCheckbox>
 				<StyledChkButton
 					type="checkbox"

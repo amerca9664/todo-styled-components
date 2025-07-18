@@ -1,9 +1,12 @@
 import { selectedViewAction, setFilter } from '../functions';
 import { StyledDiv, StyledRadButton } from './actionButtons.styles';
 
-const ActionButtons = ({ setListPrint }) => {
+const ActionButtons = ({ themeStyle, setListPrint }) => {
 	return (
-		<StyledDiv onChange={event => setFilter(event, setListPrint)}>
+		<StyledDiv
+			$background={themeStyle.itemBackground}
+			onChange={event => setFilter(event, setListPrint)}
+		>
 			<StyledRadButton
 				type="radio"
 				name="viewActions"

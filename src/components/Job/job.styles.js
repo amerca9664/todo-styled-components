@@ -7,16 +7,17 @@ const StyledDiv = styled.div`
 	align-items: center;
 	padding-left: 20px;
 	padding-right: 20px;
-
+	
     position: relative;
 	width: 100%;
 
-	border-bottom: solid 2px red;
+	border-bottom: solid 2px ${({ $borderColor }) => $borderColor};
 	color: var(--taskColor);
 `;
 
 const StyledDivCheckbox = styled.div`
     padding-left: 30px;
+
 `;
 
 const StyledButton = styled.input`
@@ -28,6 +29,9 @@ const StyledButton = styled.input`
 `;
 
 const StylesLabel = styled.label`
+	display: flex;
+	align-items: center;
+
     &::after{
         position: absolute;
         width: 20px;
