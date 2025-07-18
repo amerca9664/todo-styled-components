@@ -11,13 +11,16 @@ const Job = ({ themeStyle, idPers, checkedState, children }) => {
 		<StyledDiv $borderColor={themeStyle.borderItem}>
 			<StyledDivCheckbox>
 				<StyledChkButton
+					$checkedLabel={themeStyle.checkedLabelColor}
 					type="checkbox"
 					name=""
 					id={idPers}
 					hidden
 					defaultChecked={checkedState}
 				/>
-				<StylesLabel htmlFor={idPers}>{children}</StylesLabel>
+				<StylesLabel $background={themeStyle.itemBackground} htmlFor={idPers}>
+					{children}
+				</StylesLabel>
 			</StyledDivCheckbox>
 			<StyledButton type="button" data-select={idPers} value="" />
 		</StyledDiv>

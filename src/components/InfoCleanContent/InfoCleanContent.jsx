@@ -4,8 +4,11 @@ import { StyledDiv, StyledInput } from './infoCleanContent.styles';
 
 const InfoCleanContent = ({ setListPrint, themeStyle }) => {
 	return (
-		<StyledDiv $background={themeStyle.itemBackground}>
-			<span>x items left</span>
+		<StyledDiv
+			$fontColor={themeStyle.taskColor}
+			$background={themeStyle.itemBackground}
+		>
+			<span>0 items left</span>
 			<ActionButtons
 				themeStyle={themeStyle}
 				setListPrint={setListPrint}

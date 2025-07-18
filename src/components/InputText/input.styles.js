@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { STATIC_COLOR } from '../../styles/staticColors';
 
 const StyledDiv = styled.div`
 	width: 90vw;
@@ -23,8 +24,15 @@ const StyledDiv = styled.div`
 	left: 20px;
 	border-radius: 10px;
 	background-color: transparent;
-	border: solid 1px red;
+	border: solid 1px ${STATIC_COLOR.unCheckedJob};
     }
+
+	@media (min-width: 500px){
+    &{
+		height: 60px;
+
+    }
+	}
 `;
 
 const StyledText = styled.input`
@@ -34,6 +42,7 @@ const StyledText = styled.input`
 	background-color: ${({ $background }) => $background};
 	border: none;
 	outline: none;
-	caret-color: blue;
+	color: ${({ $fontColor }) => $fontColor};
+	caret-color: ${STATIC_COLOR.clickedAction};
 `;
 export { StyledDiv, StyledText };

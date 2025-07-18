@@ -14,12 +14,19 @@ const StyledDiv = styled.div`
 	top: 70px;
 	font-size: 1rem;
 	background-color: ${({ $background }) => $background};
-`;
+	color: ${({ $fontColor }) => $fontColor};
+	font-weight: 700;
 
-const StyledRadButton = styled.input`
-    &:checked + label {
-        color: lightblue;
+	@media (min-width: 650px){
+    &{
+		font-size: 1.2rem;
+		position: static;
+		width: 300px;
+		padding-left: 0px;
+		padding-right: 0px;
     }
+	}
+
 `;
 
-export { StyledDiv, StyledRadButton };
+export { StyledDiv };

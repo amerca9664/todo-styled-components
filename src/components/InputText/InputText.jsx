@@ -11,6 +11,7 @@ const InputText = ({ themeStyle, setListPrint }) => {
 				autoComplete="off"
 				name="tex"
 				$background={themeStyle.itemBackground}
+				$fontColor={themeStyle.taskColor}
 				onKeyUp={event => addItem(event, setListPrint)}
 			></StyledText>
 		</StyledDiv>

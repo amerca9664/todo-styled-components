@@ -11,10 +11,9 @@ export const COLORS = {
 
 		taskColor: 'hsl(234, 39%, 85%)',
 
-		checkedLabelColor: {
-			name: '--checkedLabelColor',
-			value: 'hsl(234, 11%, 52%)',
-		},
+		checkedLabelColor: 'hsl(234, 11%, 52%)',
+
+		actionsFontColor: 'white',
 	},
 
 	lightTheme: {
@@ -30,9 +29,8 @@ export const COLORS = {
 
 		taskColor: 'hsl(235, 19%, 35%)',
 
-		checkedLabelColor: {
-			name: '--checkedLabelColor',
-			value: 'hsl(210, 1.60%, 74.90%)',
-		},
+		checkedLabelColor: 'hsl(210, 1.60%, 74.90%)',
+
+		actionsFontColor: 'black',
 	},
 };

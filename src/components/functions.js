@@ -76,6 +76,7 @@ const setCheckbox = (event, setListPrint) => {
 
 const setFilter = (event, setListPrint) => {
 	selectedViewAction = event.target.dataset.action;
+	console.log(selectedViewAction);
 	setFiltereds(setListPrint);
 	return;
 };

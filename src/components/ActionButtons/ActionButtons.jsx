@@ -1,39 +1,36 @@
-import { selectedViewAction, setFilter } from '../functions';
-import { StyledDiv, StyledRadButton } from './actionButtons.styles';
+import { v4 } from 'uuid';
+
+import { setFilter } from '../functions';
+import RadButton from '../RadButton/RadButton';
+import { StyledDiv } from './actionButtons.styles';
+
+const Buttons_ACTIONS = [
+	{
+		name: 'All',
+		dataAction: 'all',
+	},
+	{
+		name: 'Active',
+		dataAction: 'active',
+	},
+	{
+		name: 'Completed',
+		dataAction: 'completed',
+	},
+];
 
 const ActionButtons = ({ themeStyle, setListPrint }) => {
 	return (
 		<StyledDiv
+			$fontColor={themeStyle.actionsFontColor}
 			$background={themeStyle.itemBackground}
 			onChange={event => setFilter(event, setListPrint)}
 		>
-			<StyledRadButton
-				type="radio"
-				name="viewActions"
-				data-action="all"
-				id="all"
-				defaultChecked={selectedViewAction === 'all'}
-				hidden
-			/>
-			<label htmlFor="all">All</label>
-			<StyledRadButton
-				type="radio"
-				name="viewActions"
-				data-action="active"
-				id="active"
-				defaultChecked={selectedViewAction === 'active'}
-				hidden
-			/>
-			<label htmlFor="active">Active</label>
-			<StyledRadButton
-				type="radio"
-				name="viewActions"
-				data-action="completed"
-				id="completed"
-				defaultChecked={selectedViewAction === 'completed'}
-				hidden
-			/>
-			<label htmlFor="completed">Completed</label>
+			{Buttons_ACTIONS.map(item => (
+				<RadButton key={v4()} action={item.dataAction}>
+					{item.name}
+				</RadButton>
+			))}
 		</StyledDiv>
 	);
 };

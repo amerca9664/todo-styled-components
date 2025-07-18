@@ -10,15 +10,30 @@ const StyledDiv = styled.div`
 	background-color: ${({ $background }) => $background};
     position: relative;
 	width: 100%;
-    color: white;
+    color: ${({ $fontColor }) => $fontColor};
 	border-radius: 10px;
+	font-weight: 700;
+	
+	@media (min-width: 500px){
+    &{
+		height: 60px;
 
+    }
+	}
 `;
 
 const StyledInput = styled.input`
 	border: none;
 	background: none;
 	color: inherit;
+	font-weight: inherit;
+
+
+	@media (hover: hover) {
+		& {
+			cursor: pointer;
+		}
+	}
 `;
 
 export { StyledDiv, StyledInput };

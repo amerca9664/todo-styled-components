@@ -10,8 +10,15 @@ body{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 0.8125rem;
+    font-size:0.70rem ;
     color: white;
+}
+
+@media (min-width: 500px){
+    body{
+        font-size: 0.95rem;
+        background: top / 100vw 30vh no-repeat url('/assets/image/bg-desktop-light.jpg') ${({ $background }) => $background};
+    }
 }
 
 img{
