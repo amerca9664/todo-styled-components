@@ -1,5 +1,5 @@
 import ActionButtons from '../ActionButtons/ActionButtons';
-import { removeCompleted } from '../functions';
+import { removeCompleted, restJobs } from '../functions';
 import { StyledDiv, StyledInput } from './infoCleanContent.styles';
 
 const InfoCleanContent = ({ setListPrint, themeStyle }) => {
@@ -8,7 +8,7 @@ const InfoCleanContent = ({ setListPrint, themeStyle }) => {
 			$fontColor={themeStyle.taskColor}
 			$background={themeStyle.itemBackground}
 		>
-			<span>0 items left</span>
+			<span>{restJobs} items left</span>
 			<ActionButtons
 				themeStyle={themeStyle}
 				setListPrint={setListPrint}

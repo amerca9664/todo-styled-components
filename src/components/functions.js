@@ -6,6 +6,21 @@ let selectedViewAction = 'all';
 
 let idGen = 0;
 
+let restJobs = 0;
+
+const setLengthSpan = () => {
+	let countCheckedTask = 0;
+	listTodov.forEach(element => {
+		if (element.state) {
+			countCheckedTask++;
+		}
+	});
+
+	restJobs = listTodov.length - countCheckedTask;
+
+	return;
+};
+
 const setFiltereds = setListPrint => {
 	let filteredJobs = [];
 
@@ -18,6 +33,7 @@ const setFiltereds = setListPrint => {
 	}
 
 	setListPrint([...filteredJobs]);
+	setLengthSpan();
 
 	return;
 };
@@ -81,4 +97,11 @@ const setFilter = (event, setListPrint) => {
 	return;
 };
 
-export { addItem, removeCompleted, setCheckbox, setFilter, selectedViewAction };
+export {
+	addItem,
+	removeCompleted,
+	setCheckbox,
+	setFilter,
+	selectedViewAction,
+	restJobs,
+};
